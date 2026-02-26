@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcano Classification Guide</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <link href="images/Icon/Volcano_icon.png" rel="icon">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div id="logoTitle">
+        <img src="images/Icon/Volcano_icon.png" alt="Page logo">
+        <h1>Volcano Classification Guide</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#shapes">Volcano Shapes</a></li>
+            <li><a href="#rocks">Volcano Rocks</a></li>
+            <li><a href="#hazards">Volcano Hazards</a></li>
+            <li><a href="#visiting">Visiting a Volcano</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- ================================= -->
+<!-- 1. IDENTIFYING VOLCANO SHAPES -->
+<!-- ================================= -->
+<section id="shapes">
+    <h2>1. Identifying Volcano Shapes</h2>
+    <section class="cards">
+        <article class="volcanoCard">
+            <h3>Shield Volcano</h3>
+            <figure class="crop">
+                <img src="images/Shapes/Sheild1.webp" alt="Shield volcano">
+            </figure>
+            <p>Shield volcanoes typicaly have runny lava and shallow slopes</p>
+        </article>
+
+        <article class="volcanoCard">
+            <h3>Stratovolcano</h3>
+            <figure class="crop">
+                <img src="images/Shapes/Strato1.webp" alt="Stratovolcano">
+            </figure>
+            <p>Stratovolcanoes normally have steep slopes and more visous lava</p>
+        </article>
+
+        <article class="volcanoCard">
+            <h3>Caldera Volcano</h3>
+            <figure class="crop">
+                <img src="images/Shapes/Caldera1.webp" alt="Caldera volcano">
+            </figure>
+            <p>Caldera volcanoes arew very explosive and usualy have large calderas</p>
+        </article>
+    </section>
+
+    <h3>Practice Identification</h3>
+    
+    <section class="practice">
+        <section class="volcanoCard">
+             <figure class="crop" >
+                <img src="images/Shapes/Practice1.webp" 
+                    alt="Practice volcano 1" onclick="showShape('Stratovolcano',
+                    'This volcano has steep sides formed by thicker, more explosive lava.')">
+            </figure>
+            <p>Identify this volcano type. Once you have answered click on the picture to see if you were right!</p>
+        </section>
+
+        <section class="volcanoCard">
+             <figure class="crop" >
+                <img src="images/Shapes/Practice2.webp"
+                    alt="Practice volcano 2" onclick="showShape('Shield Volcano',
+                    'This volcano has wide gentle slopes formed by runny lava.')">
+            </figure>
+            <p>Identify this volcano type. Once you have answered click on the picture to see if you were right!</p>
+        </section>
+    </section>
+
+    <dialog class="dialog" id="volcanoShape">
+        <h3 id="shapeTitle"></h3>
+        <p id="shapeAnswer"></p>
+        <button onclick="this.parentElement.close()">Close</button>
+    </dialog>
+
+    </dialog>
+</section>
+
+
+<!-- ================================= -->
+<!-- 2. IDENTIFYING VOLCANO ROCKS -->
+<!-- ================================= -->
+<section id="rocks">
+    <h2>2. Identifying Volcano Rocks</h2>
+
+    <h3>Intrusive vs Extrusive Texture</h3>
+    <p>Extrusive Rocks will typicaly have much larger crystal formations while Extrusive rocks you will not be able to see the crystals or they will be very small.</p>
+
+    <section class="cards" id="texture">
+
+        <figure class="rockPicture">
+            <h3>Intrusive</h3>
+            <div class="crop">
+                <img src="images/Rocks/Intrusive.webp" alt="Intrusive rock texture">
+            </div>
+        </figure>
+
+        <figure class="rockPicture">
+            <h3>Extrusive</h3>
+            <div class="crop">
+                <img src="images/Rocks/Extrusive.webp" alt="Extrusive rock texture">
+            </div>
+        </figure>
+
+    </section>
+
+    <h3>Rock Composition</h3>
+    <p>Rocks with higher iron will be a darker color and rocks with high silica will be a light color. Additionaly rocks that are more grey will be about equal or intermediate.</p>
+
+    <section class="cards" id="composition">
+
+        <figure class="rockPicture">
+            <div class="crop">
+                <img src="images/Rocks/high-iron.webp" alt="High iron rock">
+            </div>
+            <figcaption>High Iron</figcaption>
+        </figure>
+
+        <figure class="rockPicture">
+            <div class="crop">
+                <img src="images/Rocks/intermediate.webp" alt="Intermediate rock">
+            </div>
+            <figcaption>Intermediate</figcaption>
+        </figure>
+
+        <figure class="rockPicture">
+            <div class="crop">
+                <img src="images/Rocks/high-silica.webp" alt="High silica rock">
+            </div>
+            <figcaption>High Silica</figcaption>
+        </figure>
+
+    </section>
+
+    <section>
+        <h3>Using Texture and Composition</h3>
+        <p>using both of these techniques allows us to classify rock within a range of different types.</p>
+    </section>
+
+    <h3>Practice Rock Identification</h3>
+
+    <table class="rockTable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>High-Iron (Mafic)</th>
+                <th>Intermediate</th>
+                <th>High-Silica (Felsic)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Extrusive</th>
+                <td>Basalt</td>
+                <td>Andesite</td>
+                <td>Rhyolite</td>
+            </tr>
+
+            <tr>
+                <th>Intrusive</th>
+                <td>Gabbro</td>
+                <td>Diorite</td>
+                <td>Granite</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section class="cards" id="practiceSection">
+
+        <figure class="rockPicture">
+            <div class="crop">
+                <img src="images/Rocks/Practice1.webp"
+                    alt="Practice rock 1" onclick="showRock('Diorite',
+                    'This is a intermediate intrusive rock with large crystals')">
+            </div>
+            <figcaption>Identify this rock. Click the picture when you're ready for the answer.</figcaption>
+        </figure>
+
+        <figure class="rockPicture">
+            <div class="crop">
+                <img src="images/Rocks/Practice2.webp"
+                    alt="Practice rock 2" onclick="showRock('Basalt',
+                    'This is an iron-rich extrusive rock with small crystals')">
+            </div>
+            <figcaption>Identify this rock. Click the picture when you're ready for the answer.</figcaption>
+        </figure>
+
+    </section>
+
+    <dialog class="dialog" id="classification">
+        <h3 id="rockTitle"></h3>
+        <p id="rockAnswer"></p>
+        <button onclick="this.parentElement.close()">Close</button>
+    </dialog>
+</section>
+
+
+<!-- ================================= -->
+<!-- 3. IDENTIFYING VOLCANO HAZARDS -->
+<!-- ================================= -->
+<section id="hazards">
+    <h2>3. Identifying Volcano Hazards</h2>
+
+    <article>
+        <h3>Lava Flows</h3>
+        <p>
+        Lava flows occur when magma from below earths crust escapes to the surface and runs down slopes.
+        Most lava flows move slowly and are a result of volcanic activity.
+        The speed and distance of a lava flow depend on how thick or runny the lava is.
+        </p>
+    </article>
+
+    <article>
+        <h3>Pyroclastic Flows</h3>
+        <p>
+        Pyroclastic flows are fast-moving clouds of extremely hot gas, ash, and volcanic rock that
+        rush down the sides of a volcano during explosive eruptions. These flows can travel very fast and dont offer much evacuation time.
+        Thankfully they usualy dont get very far from the volcano.
+        Because of their speed and heat, pyroclastic flows are one of the most dangerous volcanic hazards.
+        </p>
+    </article>
+
+    <article>
+        <h3>Lahars</h3>
+        <p>
+        Lahars are volcanic mudflows made of water, ash, rock, and debris that flow down river valleys
+        and slopes near a volcano. They can be triggered by heavy rain, melting snow, or volcanic eruptions.
+        Lahars behave like flowing concrete and can travel long distances, burying towns and damaging
+        structures far from the volcano.
+        </p>
+    </article>
+
+    <article>
+        <h3>Ash Clouds</h3>
+        <p>
+        Volcanic ash clouds form when explosive eruptions send tiny fragments of rock and glass high
+        into the atmosphere. Falling ash can damage buildings, contaminate water supplies, harm lungs,
+        and disrupt transportation. Ash clouds are especially dangerous to aircraft because ash particles
+        can damage jet engines.
+        </p>
+    </article>
+
+    <article>
+        <h3>Volcanic Gasses</h3>
+        <p>
+        Volcanoes release gases such as water vapor, carbon dioxide, and sulfur dioxide during eruptions.
+        Some volcanic gases can be harmful or deadly when concentrated, especially in low-lying areas.
+        These gases can also cause acid rain and contribute to air pollution that affects people,
+        animals, and plants.
+        </p>
+    </article>
+
+    <article>
+        <h3>Climate Effects</h3>
+        <p>
+        Large volcanic eruptions can affect Earth's climate by releasing ash and sulfur-rich gases
+        into the upper atmosphere. These particles reflect sunlight back into space, which can lower
+        global temperatures for months or even years. Historic eruptions have caused temporary cooling
+        and changes in weather patterns around the world.
+        </p>
+    </article>
+</section>
+
+
+<!-- ================================= -->
+<!-- 4. VISITING A VOLCANO -->
+<!-- ================================= -->
+<section id="visiting">
+    <h2>4. What to Do When Visiting a Volcano</h2>
+
+    <section>
+        <h3>Before Visiting</h3>
+        <ul>
+            <li>Check the volcano’s current activity and alert level with local authorities.</li>
+            <li>Wear sturdy shoes, long pants, and weather-appropriate clothing for rugged terrain.</li>
+            <li>Bring essential supplies such as water, snacks, sunscreen, a hat, and a map of the area.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>While Visiting</h3>
+        <ul>
+            <li>Stay on marked trails and follow all safety signs and instructions from guides.</li>
+            <li>Keep a safe distance from lava flows, fumaroles, and unstable slopes.</li>
+            <li>Wear a mask or cover your nose and mouth if ash or volcanic dust is present.</li>
+        </ul>
+    </section>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Volcano Classification Website</p>
+</footer>
+
+</body>
+</html>
