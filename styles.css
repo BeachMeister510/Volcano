@@ -23,20 +23,20 @@ header nav a {
     border-radius: 8px;          /* rounded hover */
     font-weight: bold;
     font-size: 1.1em;
-    color: rgb(188, 188, 188);
+    color: whitesmoke;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Hover effect */
 header nav a:hover {
-    background-color: rgb(188, 188, 188); /* light gray */
-    color: rgb(57, 56, 56);              /* dark text */
+    background-color: whitesmoke;; /* light gray */
+    color: rgb(141, 76, 76);              /* dark text */
 }
 
 /* Optional: active link highlight */
 header nav a.active {
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(141, 76, 76);
     color: whitesmoke;
 }
 
@@ -52,9 +52,8 @@ header nav a.active {
 }
 
 #logoTitle h1{
-    color: rgb(188, 188, 188);
+    color: whitesmoke;;
 }
-
 
 /* Push nav to the far right */
 header nav {
@@ -80,6 +79,14 @@ li a {
 main{
     background-color: rgb(188, 188, 188);
 }
+
+#shapes,
+#rocks,
+#hazards,
+#visiting {
+    scroll-margin-top: 150px;
+}
+
 
 #shapes{
     padding-top: 30px;
@@ -196,11 +203,6 @@ main{
 /* left header column */
 .rockTable tbody th {
     background-color: rgb(80, 80, 80);
-}
-
-/* subtle hover effect */
-.rockTable td:hover {
-    background-color: rgb(90, 90, 90);
 }
 
 ul{
